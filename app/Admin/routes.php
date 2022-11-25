@@ -15,6 +15,5 @@ Route::group([
 
     $router->resource('brands', BrandController::class);
     $router->resource('products', ProductController::class);
-
-
+    $router->resource('categories', CategoryController::class);
 });

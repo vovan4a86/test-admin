@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -17,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
     //    $products = Product::all();
 //        $products = Product::with('brand')->get();
 //
@@ -44,3 +44,5 @@ Route::get('/', function () {
 
     return view('welcome');
 });
+
+Route::resource('categories', CategoryController::class);
